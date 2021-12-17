@@ -6,7 +6,7 @@ const Weather = () => {
     lat: '48.137154',
     lon: '11.576124',
     lang: 'en',
-    unit: 'metric', // values are (metric, standard, imperial)
+    unit: 'imperial', // values are (metric, standard, imperial)
   });
   return (
     <ReactWeather
