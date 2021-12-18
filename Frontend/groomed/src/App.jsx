@@ -1,10 +1,3 @@
-// import React, { Component } from 'react';
-// import Calendar from './components/calendar';
-// import SportsScores from './components/sportsScores';
-// import Weather from './components/weather';
-
-
-
 import React, { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 // import { ThemeProvider, StylesProvider } from '@material-ui/core'
@@ -14,7 +7,6 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Landing from './pages/Landing'
 // import Error from './pages/Error'
-// import Profile from './pages/Profile'
 // import ResponsiveAppBar from './components/theme/MuiAppbar'
 import PrivateRoute from './components/theme/PrivateRoute'
 import { UserProvider } from './context/UserContext'

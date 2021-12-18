@@ -114,7 +114,7 @@ const ResponsiveAppBar = () => {
           >
             GROOMED
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'grey' }}>
             {pages.map((page) => (
               <Button
                 key={page}

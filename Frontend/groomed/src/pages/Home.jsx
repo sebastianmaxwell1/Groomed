@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Container, Typography } from '@material-ui/core'
 
-
+import Calendar from '../components/calendar'
 
 import UserContext from '../context/UserContext'
 import ResponsiveAppBar from '../components/theme/MuiAppbar'
@@ -17,6 +17,7 @@ export default function Home () {
         </Typography>
         <ResponsiveAppBar />
       </Container>
+      <Calendar />
     </Container>
   )
 }
