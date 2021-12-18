@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
-// import LoginPage from './LoginPage'
+import LoginPage from './LoginPage'
 import Registration from './Registration'
 
 export default function Landing () {
@@ -29,7 +29,7 @@ export default function Landing () {
       </Grid>
 
       <Registration />
-      {/* <LoginPage /> */}
+      <LoginPage />
     </div>
   )
 }
