@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Button, Container } from '@material-ui/core'
 
-import RegistrationForm from '../components/forms/RegistrationForm'
-import Controls from '../components/controls/Controls'
+import RegistrationForm from '../components/Forms/RegistrationForm'
+import Controls from '../components/Controls/Controls'
 
-export default function RegistrationPage() {
+export default function Registration() {
 
   const [openPopup, setOpenPopup] = useState(false)
 

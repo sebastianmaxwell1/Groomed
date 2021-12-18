@@ -1,9 +1,12 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from './App'
+import './index.css'
 
-const jsxElement = <h1>Groomed</h1>;
-console.log(jsxElement);
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Router>
+      <App />
+    </Router>,
+  document.getElementById('root')
+)
