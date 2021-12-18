@@ -10,6 +10,7 @@ import Landing from './pages/Landing'
 // import ResponsiveAppBar from './components/theme/MuiAppbar'
 import PrivateRoute from './components/theme/PrivateRoute'
 import { UserProvider } from './context/UserContext'
+
 export default function App () {
 
     // const [darkMode, setDarkMode] = useState(false)
@@ -49,6 +50,7 @@ export default function App () {
               element={
                 <PrivateRoute>
                   <Home />
+                  
                 </PrivateRoute>
               } 
             />
