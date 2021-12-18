@@ -2,10 +2,14 @@ import { Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import LoginPage from './LoginPage'
 import Registration from './Registration'
+import '../Styles/Landing.css'
 
 export default function Landing () {
   return (
     <div>
+      <div className='bgimage'>
+        <h1>Groomed Logo</h1>
+      </div>
       <Grid
         container
         spacing={0}

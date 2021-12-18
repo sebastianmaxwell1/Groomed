@@ -6,6 +6,7 @@ import Calendar from '../components/calendar'
 import UserContext from '../context/UserContext'
 import ResponsiveAppBar from '../components/theme/MuiAppbar'
 
+
 export default function Home () {
   const { user } = useContext(UserContext)
 
@@ -18,6 +19,7 @@ export default function Home () {
         <ResponsiveAppBar />
       </Container>
       <Calendar />
+      
     </Container>
   )
 }

@@ -18,8 +18,7 @@ app.use(express.json())
 
 app.use('/api/users', users)
 app.use('/api/auth', auth)
-module.exports.TextPost = require("./textPost");
-module.exports.Comment = require("./comment");
+app.use("/api", routes);
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
