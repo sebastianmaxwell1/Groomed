@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
-import '../css/League.css';
+import * as actions from '../components/actions';
+import '../Styles/League.css';
 import NewsLeague from './NewsLeague';
 
 class League extends React.Component {

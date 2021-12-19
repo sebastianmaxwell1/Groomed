@@ -6,10 +6,9 @@ import { Routes, Route } from 'react-router-dom'
 // import { lightTheme, darkTheme } from './components/theme/Theme'
 import Home from './pages/Home'
 import Landing from './pages/Landing'
-// import Error from './pages/Error'
-// import ResponsiveAppBar from './components/theme/MuiAppbar'
 import PrivateRoute from './components/theme/PrivateRoute'
 import { UserProvider } from './context/UserContext'
+import Breakroom from './pages/Breakroom'
 
 export default function App () {
 
@@ -39,9 +38,6 @@ export default function App () {
           setIsAuth={setIsAuth}
         /> */}
 
-    
-        
-  
           <Routes>
             <Route path='/' element={<Landing />} />
   
@@ -50,7 +46,6 @@ export default function App () {
               element={
                 <PrivateRoute>
                   <Home />
-                  
                 </PrivateRoute>
               } 
             />

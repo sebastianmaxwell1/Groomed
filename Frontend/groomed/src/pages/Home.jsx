@@ -5,6 +5,7 @@ import Calendar from '../components/calendar'
 
 import UserContext from '../context/UserContext'
 import ResponsiveAppBar from '../components/theme/MuiAppbar'
+import Breakroom from './Breakroom'
 
 
 export default function Home () {
@@ -19,7 +20,8 @@ export default function Home () {
         <ResponsiveAppBar />
       </Container>
       <Calendar />
-      
-    </Container>
+      {/* <Breakroom /> */}
+
+</Container>
   )
 }
