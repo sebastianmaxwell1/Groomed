@@ -6,6 +6,8 @@ const cors = require('cors')
 
 const users = require('./routes/users')
 const auth = require('./routes/auth')
+// const comment = require('./routes/auth')
+const router = require('./routes/users')
 // const articles = require('./routes/articleRoutes')
 
 
@@ -19,7 +21,7 @@ app.use(express.json())
 
 app.use('/api/users', users)
 app.use('/api/auth', auth)
-// require('./routes/articleRoutes')(app);
+app.use('/api', router);
 // app.use('./routes/articleRouts', articles);
 
 
