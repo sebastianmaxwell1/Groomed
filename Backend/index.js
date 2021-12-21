@@ -7,6 +7,10 @@ const cors = require('cors')
 const users = require('./routes/users')
 const auth = require('./routes/auth')
 
+const cityRouter = require("./City/routes/city");
+const restaurantRouter = require('./Restaurants/routes/restaurant');
+const searchRouter = require("./Search/routes/search");
+
 // const path = require('path');
 // const http = require('http');
 // const bodyParser = require('body-parser');
@@ -30,6 +34,10 @@ app.use(express.json())
 
 app.use('/api/users', users)
 app.use('/api/auth', auth)
+
+app.use("/api/city", cityRouter);
+app.use("/api/restaurant", restaurantRouter);
+app.use("/api/search", searchRouter);
 
 // app.use('/posts', postsRouter);
 // app.use('/comments', commentsRouter);
