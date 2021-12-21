@@ -6,9 +6,8 @@ const cors = require('cors')
 
 const users = require('./routes/users')
 const auth = require('./routes/auth')
-// const comment = require('./routes/auth')
-const router = require('./routes/users')
-// const articles = require('./routes/articleRoutes')
+// const comments = require('./routes/comment')
+
 
 
 
@@ -21,8 +20,8 @@ app.use(express.json())
 
 app.use('/api/users', users)
 app.use('/api/auth', auth)
-app.use('/api', router);
-// app.use('./routes/articleRouts', articles);
+// app.use('/api/comments', comments)
+
 
 
 const port = process.env.PORT || 8000;

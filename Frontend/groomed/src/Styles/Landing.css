@@ -1,7 +1,25 @@
-body {
-    background-color: #504D4D;
-}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: slategray;
+    /* background: -webkit-linear-gradient(to right, #243B55, #141E30);  Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #243B55, #141E30); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff 
+  }
 
 .bgimage {
     background-image: url(../Assets/logo.jpeg);
 }
+
+.MuiTypography-h1 {
+  color:white;
+  text-align: center;
+}
+
+.MuiTypography-h5 {
+  text-align: center;
+}
+
+.MuiContainer-root{
+  text-align: center;
+}
+

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-// import { ThemeProvider, StylesProvider } from '@material-ui/core'
+import { ThemeProvider, StylesProvider } from '@material-ui/core'
+import { theme } from "../src/theme/theme"
 // import CssBaseline from '@material-ui/core/CssBaseline'
-
 // import { lightTheme, darkTheme } from './components/theme/Theme'
 import Home from './pages/Home'
 import Landing from './pages/Landing'
 import PrivateRoute from './components/theme/PrivateRoute'
 import { UserProvider } from './context/UserContext'
-import Breakroom from './pages/Breakroom'
+// import Breakroom from './pages/Breakroom'
 
 export default function App () {
 
@@ -26,17 +26,8 @@ export default function App () {
     }, [isAuth])
   
     return (
+      <ThemeProvider theme={theme}>
       <UserProvider>
-        {/* <StylesProvider injectFirst>
-        <ThemeProvider theme={theme}> */}
-          {/* <CssBaseline /> */}
-
-          {/* <ResponsiveAppBar 
-        //   check={darkMode}
-        //   change={() => setDarkMode(!darkMode)}
-          isAuth={isAuth}
-          setIsAuth={setIsAuth}
-        /> */}
 
           <Routes>
             <Route path='/' element={<Landing />} />
@@ -51,11 +42,11 @@ export default function App () {
             />
 
   
-            {/* <Route path='*' element={<Error />} /> */}
+          
           </Routes>
-        {/* </ThemeProvider>
-        </StylesProvider> */}
+   
       </UserProvider>
+      </ThemeProvider>
     )
   }
   

@@ -16,9 +16,7 @@ const validateUserInfo = (userInfo) => {
     firstName: Joi.string().min(2).max(20).required(),
     lastName: Joi.string().min(2).max(20).required(),
     userName: Joi.string().min(5).max(20).required(),
-    relationshipStatus: Joi.string().required(),
-    profilePicture: Joi.string,
-    coverPhoto: Joi.string
+  
   })
   return schema.validate(userInfo)
 }
