@@ -6,7 +6,7 @@ import Calendar from '../components/calendar'
 import UserContext from '../context/UserContext'
 import ResponsiveAppBar from '../components/theme/MuiAppbar'
 
-// import Community from '../components/comments/Community'
+import Community from './Community'
 
 
 export default function Home () {
@@ -22,6 +22,7 @@ export default function Home () {
       </Container>
       <Calendar />
       {/* <Community /> */}
+    
      
 
 </Container>

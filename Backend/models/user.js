@@ -2,6 +2,8 @@ const mongoose = require('mongoose')
 const Joi = require('joi')
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
+const passportLocalMongoose = require('passport-local-mongoose');
+
 
 
 dotenv.config()
@@ -31,6 +33,9 @@ const validateUser = (user) => {
   })
   return schema.validate(user)
 }
+
+
+userSchema.plugin(passportLocalMongoose, { usernameField : 'email' });
 
 exports.User = User
 exports.validateUser = validateUser

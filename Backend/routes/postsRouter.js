@@ -5,7 +5,7 @@ const cors = require('./cors');
 
 
 const {Posts, Reactions, Comments} = require('../models/posts');
-const Users = require('../models/users');
+const {Users} = require('../models/user');
 
 const postsRouter = express.Router();
 postsRouter.use(bodyParser.json());
@@ -23,10 +23,21 @@ postsRouter.route('/')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
+/* DEV ONLY
+.delete((req, res, next) => {
+    Posts.deleteMany({})
+    .then((resp) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(resp);
+    }, (err) => next(err))
+    .catch((err) => next(err));
+})
+*/
 
 postsRouter.route('/:username')
 .get(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
-    //Get all posts from this groomed user
+    //Get all posts from this User's Wall
     Users.findOne({username : req.params.username})
     .then((OnWallOf) => {
         if(!OnWallOf){
@@ -46,7 +57,7 @@ postsRouter.route('/:username')
 
 })
 .post(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
-    //Add a Post to this community wall
+    //Add a Post to this User's Wall
     req.body.Author = req.user._id;
     console.log(req.params.username);
     Users.findOne({username : req.params.username})
@@ -64,7 +75,7 @@ postsRouter.route('/:username')
     .catch((err) => next(err));
 });
 
-postsRouter.route('/:postID') //Would conflict with /:username 
+postsRouter.route('/:postID') //Would conflict with /:username .delete if implemented
 .delete(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
   //Delete a Post on the User's Wall
     Posts.findOne({OnWallOf : req.user, _id : req.params.postID})
@@ -161,7 +172,7 @@ postsRouter.route('/:postID/reactions')
             res.statusCode = 403;
             res.end('Post _id: '+req.params.postID+' cannot be found');
         } else {
-          
+            // console.log('okkkk');
             
             // console.log(post);
             let reaction = post.Reactions.filter(reaction => req.user._id.equals(reaction.User._id))[0];
@@ -207,6 +218,25 @@ postsRouter.route('/:postID/comments')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
+// .get(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
+//     //Get all Comments on a Post
+//     Posts.findOne({_id : req.params.postID})
+//     .populate({ path: 'Comments',
+//                 // Get User for each reaction
+//                 populate: [{ path: 'Author' }, { path: 'Reactions', populate:{path:'User'}}, { path: 'Replies' }]
+//               })
 
+//     .then((post) => {
+//         if(!post){
+//             res.statusCode = 403;
+//             res.end('Post _id: '+req.params.postID+' cannot be found');
+//         } else {
+//             res.statusCode = 200;
+//             res.setHeader('Content-Type', 'application/json');
+//             res.json(post.Comments);
+//         }
+//     }, (err) => next(err))
+//     .catch((err) => next(err));
+// })
 
 module.exports = postsRouter;
