@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     paddingRight: '0px'
   },
   text: {
-    color: '#bd93f9',
+    color: 'black',
   }
 }))
 

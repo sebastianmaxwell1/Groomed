@@ -15,7 +15,7 @@ const Weather = () => {
       data={data}
       lang="en"
       locationLabel="Miami"
-      unitsLabels={{ temperature: 'f', windSpeed: 'mp/h' }}
+      unitsLabels={{ temperature: 'F', windSpeed: 'mp/h' }}
       showForecast
     />
   );

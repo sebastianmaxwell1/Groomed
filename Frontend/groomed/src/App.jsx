@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { ThemeProvider, StylesProvider } from '@material-ui/core'
+import { ThemeProvider, StylesProvider, Button } from '@material-ui/core'
 import { theme } from "../src/theme/theme"
 // import CssBaseline from '@material-ui/core/CssBaseline'
 // import { lightTheme, darkTheme } from './components/theme/Theme'
@@ -8,7 +8,7 @@ import Home from './pages/Home'
 import Landing from './pages/Landing'
 import PrivateRoute from './components/theme/PrivateRoute'
 import { UserProvider } from './context/UserContext'
-// import Breakroom from './pages/Breakroom'
+
 
 export default function App () {
 
@@ -40,9 +40,7 @@ export default function App () {
                 </PrivateRoute>
               } 
             />
-
-  
-          
+            
           </Routes>
    
       </UserProvider>

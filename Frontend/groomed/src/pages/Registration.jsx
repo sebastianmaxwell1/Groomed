@@ -10,21 +10,21 @@ export default function Registration() {
 
   return (
     <Container>
-
       <Button
         onClick={() => setOpenPopup(true)}
+        color="secondary"
+        variant="contained"
       >
         Register
       </Button>
 
       <Controls.Popup
-        text='Register Account'
+        text="Register Account"
         openPopup={openPopup}
         setOpenPopup={setOpenPopup}
       >
         <RegistrationForm setOpenPopup={setOpenPopup} />
       </Controls.Popup>
-      
     </Container>
-  )
+  );
 }

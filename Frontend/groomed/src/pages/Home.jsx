@@ -1,30 +1,28 @@
 import React, { useContext } from 'react'
 import { Container, Typography } from '@material-ui/core'
-
 import Calendar from '../components/calendar'
-
 import UserContext from '../context/UserContext'
 import ResponsiveAppBar from '../components/theme/MuiAppbar'
+import Weather from '../components/weather'
 
-import Community from './Community'
+
+
 
 
 export default function Home () {
   const { user } = useContext(UserContext)
 
   return (
+    
     <Container>
       <Container>
-        <Typography variant='h2'>
+        <Typography variant='h4'>
           Welcome! {user.firstName}
         </Typography>
         <ResponsiveAppBar />
       </Container>
       <Calendar />
-      {/* <Community /> */}
-    
-     
-
-</Container>
+      <Weather />     
+    </Container>
   )
 }
