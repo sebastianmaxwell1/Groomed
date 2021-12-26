@@ -4,8 +4,7 @@ import Calendar from '../components/calendar'
 import UserContext from '../context/UserContext'
 import ResponsiveAppBar from '../components/theme/MuiAppbar'
 import Weather from '../components/weather'
-
-
+import Hero from '../components/banner'
 
 
 
@@ -21,8 +20,9 @@ export default function Home () {
         </Typography>
         <ResponsiveAppBar />
       </Container>
+      <Hero />
       <Calendar />
-      <Weather />     
+      {/* <Weather />      */}
     </Container>
   )
 }
