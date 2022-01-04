@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import { Container, Typography } from '@material-ui/core'
+import { Card, Container, Typography } from '@material-ui/core'
 import Calendar from '../components/calendar'
 import UserContext from '../context/UserContext'
 import ResponsiveAppBar from '../components/theme/MuiAppbar'
 import Weather from '../components/weather'
 import Hero from '../components/banner'
+import MediaCard from '../components/card'
 
 
 
@@ -15,13 +16,15 @@ export default function Home () {
     
     <Container>
       <Container>
-        <Typography variant='h4'>
+        {/* <Typography variant='h4'>
           Welcome! {user.firstName}
-        </Typography>
+        </Typography> */}
         <ResponsiveAppBar />
       </Container>
       <Hero />
       <Calendar />
+
+      {/* <MediaCard /> */}
       {/* <Weather />      */}
     </Container>
   )
