@@ -24,8 +24,8 @@ export default function Home () {
       <Hero />
       <Calendar />
 
-      {/* <MediaCard /> */}
-      {/* <Weather />      */}
+      <MediaCard />
+      <Weather />     
     </Container>
   )
 }

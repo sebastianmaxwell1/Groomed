@@ -18,7 +18,7 @@ const Community = () => (
         <Comment.Actions>
           <Comment.Action>Reply</Comment.Action>
         </Comment.Actions>
-      </Comment.Content>
+      </Comment.Content> 
     </Comment>
 
     <Comment>
